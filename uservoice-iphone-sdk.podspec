@@ -7,9 +7,9 @@ Pod::Spec.new do |s|
   s.license       = { :type => 'Apache License, Version 2.0', :file => 'LICENSE.md' }
   s.author        = 'UserVoice'
   s.platform      = :ios, '6.0'
-  s.source        = { :git => "https://github.com/uservoice/uservoice-ios-sdk.git", :tag => "3.2.3" }
+  s.source        = { :git => "https://github.com/szhyh/uservoice-ios-sdk.git", :tag => "3.2.3" }
   s.source_files  = 'Classes/*.{h,m}', 'Categories/*.{h,m}', 'Vendor/**/*.{c,h,m}', 'Include/*.h'
-  s.resource_bundles = { 'UserVoice' => ['Resources/*'] }
+  s.resource_bundles = { 'UserVoice' => ['Resources/*.lproj', 'Resources/*.png'] }
   s.frameworks    = 'QuartzCore', 'SystemConfiguration'
   s.requires_arc  = true
 end
