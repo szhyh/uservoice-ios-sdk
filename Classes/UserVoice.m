@@ -37,7 +37,11 @@ static NSBundle *userVoiceBundle;
         }
     }
     if (!userVoiceBundle) {
-        userVoiceBundle = [NSBundle mainBundle];
+        //userVoiceBundle = [NSBundle mainBundle];
+        userVoiceBundle = [NSBundle bundleForClass:[self class]];
+        if (userVoiceBundle && ![userVoiceBundle isLoaded]) {
+            [userVoiceBundle load];
+        }
     }
     return userVoiceBundle;
 }
